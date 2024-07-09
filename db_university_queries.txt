@@ -1,0 +1,63 @@
+Query 1: 
+
+SELECT *
+FROM `students`
+WHERE `students`.`date_of_birth` 
+LIKE '1990%';
+
+Query 2:
+
+SELECT * 
+FROM `courses`
+WHERE `courses`.`cfu` > 10;
+
+Query 3:
+
+SELECT *
+FROM `students`
+WHERE DATEDIFF(CURRENT_DATE, `date_of_birth`) / 365 > 30;
+
+Query 4:
+
+SELECT *
+FROM `courses`
+WHERE `courses`.`period`='I semestre' AND `courses`.`year`='1';
+
+Query 5:
+
+SELECT *
+FROM `exams`
+WHERE `exams`.`date`='2020-06-20' AND `exams`.`hour` > '14:00:00';
+
+Query 6:
+
+SELECT *
+FROM `degrees` 
+WHERE `degrees`.`level`='magistrale';
+
+Query 7:
+
+SELECT COUNT(`id`)
+FROM `departments`;
+
+Query 8:
+
+SELECT *
+FROM `teachers`
+WHERE `teachers`.`phone` IS NULL;
+
+Query 9:
+
+INSERT INTO `students` (`degree_id` , `name`, `surname`, `date_of_birth`, `fiscal_code`, `enrolment_date` , `registration_number`, `email`)
+VALUES ( '34' ,'Lorenzo', 'Paris', '1996-08-26', 'XVPXMT46D14F016H', '2024-03-27', '612030', 'mylore@email.com');
+
+Query 10:
+
+UPDATE `teachers`
+SET `office_number`='320'
+WHERE `id`='58';
+
+Query 11:
+
+DELETE FROM `students` 
+WHERE `students`.`id`='5003';
